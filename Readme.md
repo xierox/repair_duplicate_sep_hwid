@@ -56,7 +56,10 @@ This project makes it simple to run the fix tool across multiple endpoints by le
 - To reset the the hardware ID of affected clients, move them into the group **My Company\Repair Duplicate HWID**. The clients will download and run the RepairClonedImage.exe tool shortly after their next heartbeat.
 - Shortly after this tool is run, clients will check into the SEPM and should show up correctly.
 
-**WARNING:** Do NOT move all clients into this group. Only move clients affected by this issue! Moving a large number of non-affected clients into this group will result in a large number of stale client records. These will be removed, by default, after 30 days, but there will be a large number of stale client records until then!
+**WARNING:** Do NOT move all clients into this group. Only move clients affected by this issue! Moving a large number of non-affected clients into this group will result in a large number of stale client records. These will be removed, by default, after 30 days, but there will be a large number of stale client records until then
+
+## Step 5: Move clients back to their proper groups
+- When the tool has run across your computers and the duplicate hardware ID issue is resolved, move the clients from **My Computer\Repair Duplicate HWID** back to their proper groups. Do not leave clients in this group indefinitely.
 
 ------------------------------------------------------------------------
 # Tips
