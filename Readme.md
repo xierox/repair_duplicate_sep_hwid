@@ -15,16 +15,19 @@ This project makes it simple to run the fix tool across multiple endpoints by le
 
 ## Step 1: Create a special group and assign the policy
 - Download the DAT file by clicking the **Download ZIP** button
-- Import the HI policy into your Symantec Endpoint Protection Manager (SEPM)
+- Extract the ZIP file
+- Import the file named **Repair Duplicate HWID.dat** into your Symantec Endpoint Protection Manager (SEPM)
     + Login to the **SEPM**
     + Click **Policies**
     + Click **Host Integrity**
     + Click **Import a Host Integrity Policy**
-- Create the group **My Company\Repair Duplicate HWID** If you have configured a password to stop SEP services, it must be disabled using the following steps.
-    + Login to the **SEPM**
-    + Click **Clients** > **Policies** > **Password Settings**
-    + Uncheck **Require a password to stop the client service**
-    + Click **OK**
+- Create the group **My Company\Repair Duplicate HWID**
+    - Disable policy inheritance for the group
+    - Apply the policy named **Repair Duplicate HWID** to the group
+    - If you have configured a password to stop SEP services, it must be disabled for this group using the following steps.
+        * Click **Clients** > **Policies** > **Password Settings**
+        * Uncheck **Require a password to stop the client service**
+        * Click **OK**
 
 ## Step 2: Copy RepairClonedImage.exe to <SEPM>\inetpub\content
 - Pick one SEPM in your site to host the RepairClonedImage.exe tool and write down its hostname
